@@ -1,24 +1,35 @@
-# README
+# FRC CSA Trello Request Form
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This simple Rails app provides a easy way for teams to submit a new
+card to a Trello board for use by CSA's to manage their work queue
+at FRC events.
 
-Things you may want to cover:
+## Requirements
+- A Trello board
+- Heroku account
 
-* Ruby version
+## Setup
 
-* System dependencies
+### Trello
+1. Create a board, it can be public or private
+2. Add lists to manage your workflow
+3. Add labels to help categorize cards. The list of labels will be presented to
+the user as a Cateogry selection
+4. Obtain API keys
+  1. Navigate to https://trello.com/app-key
+  2. Save your Developer keys
+  3. Click the link to generate a Token
+  4. Save the generated user token
 
-* Configuration
+### Heroku
 
-* Database creation
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Database initialization
+Click the button above to start the deployment process.
 
-* How to run the test suite
+Populate the required environment variables:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- TRELLO_DEVELOPER_KEY: The developer key obtained above
+- TRELLO_MEMBER_TOKEN: The user token obtained above
+- TRELLO_BOARD_ID: The ID of your board. This can be found in the URL. `https://trello.com/b/BOARD_ID/board-name`
+- TRELLO_LIST_NAME: The name of the list that new cards should be placed. e.g., `Inbound`

@@ -12,29 +12,31 @@
   </head>
 
   <body>
-    <div class="layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-      <header class="header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">CSA Request Form</span>
-          <div class="mdl-layout-space"></div>
-        </div>
-      </header>
+    <nav>
+      <div class="nav-wrapper">
+        <span class="brand-logo">CSA Request Form</span>
+      </div>
+    </nav>
+    <div class="row">
       <div class="ribbon"></div>
-      <main class="main mdl-layout__content">
-        <div class="container mdl-grid">
-          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-          <div class="mdl-cell mdl-cell--8-col mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 content">
-            <%= yield %>
+      <div class="layout">
+        <main class="main">
+          <div class="container">
+            <div class=""></div>
+            <div class="content card-panel col s12 m8 offset-m2">
+              <%= yield %>
+            </div>
           </div>
-        </div>
-        <footer class="footer mdl-footer mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <ul class="mdl-mini-footer--link-list">
-              <li>hi</li>
-            </ul>
-          </div>
-        </footer>
-      </main>
+        </main>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="mdl-mini-footer--left-section">
+        <ul class="mdl-mini-footer--link-list">
+          <li>Created by: Jared Szechy</li>
+          <li><a href="http://github.com/szechyjs">github</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,23 @@
+{
+  "name": "FRC CSA Request Form",
+  "description": "Provides a web form for teams to add new card to Trello board",
+  "website": "https://github.com/szechyjs/frc-csa-trello",
+  "repository": "https://github.com/szechyjs/frc-csa-trello.git",
+  "logo": "https://www.firstinspires.org/sites/default/files/uploads/resource_library/brand/FIRSTRobotics_IconVert_RGB.jpg",
+  "keywords": ["ruby", "rails", "trello"],
+  "success_url": "/",
+  "env": {
+    "TRELLO_DEVELOPER_KEY": {
+      "description": "Trello Developer API Key. https://trello.com/app-key"
+    },
+    "TRELLO_MEMBER_TOKEN": {
+      "description": "Trello User Token. https://trello.com/app-key"
+    },
+    "TRELLO_BOARD_ID": {
+      "description": "The ID of the board, can be found in the URL. https://trello.com/b/BOARD_ID/board-name"
+    },
+    "TRELLO_LIST_NAME": {
+      "description": "The name of the list to place new cards"
+    }
+  }
+}

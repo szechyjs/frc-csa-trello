@@ -1,6 +1,68 @@
-@import 'material';
+@import 'materialize';
+
+.alert-notice {
+  @extend .blue-text;
+}
+
+.alert-alert {
+  @extend .red-text;
+}
+
+.row .col {
+    float: none;
+}
+
+body {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+nav {
+    color: #000;
+    background-color: #F5F5F5;
+}
+
+nav .brand-logo {
+    color: #000;
+    font-size: 20px;
+}
+
+nav .nav-wrapper {
+    padding-left: 40px;
+}
+
+.content.card-panel {
+    padding: 60px;
+}
+
+@media only screen and (max-width: 480px) {
+    .content.card-panel {
+        padding: 20px;
+    }
+}
+
+footer {
+    padding: 32px 16px;
+    color: #9E9E9E;
+    background-color: #424242;
+}
+
+footer a {
+    color: #9E9E9E;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
 
 .ribbon {
+    width: 100%;
     height: 40vh;
     background-color: #3F51B5;
     -webkit-flex-shrink: 0;
@@ -19,10 +81,31 @@
     padding-left: 40px;
 }
 
+.container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+}
+
 .content {
     border-radius: 2px;
     padding: 80px 56px;
     margin-bottom: 80px;
+    background-color: #FFF;
 }
 
+.layout.is-small-screen .content {
+    padding: 40px 28px;
+}
 
+.content h3 {
+    margin-top: 48px;
+}
+
+.footer {
+    padding-left: 40px;
+}
+
+.footer .mdl-mini-footer--link-list a {
+    font-size: 13px;
+}

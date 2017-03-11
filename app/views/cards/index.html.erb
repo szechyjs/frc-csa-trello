@@ -1,0 +1,17 @@
+<h3>Submit a Request</h3>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<%= simple_form_for(@card) do |f| %>
+    <%= f.input :team_number, as: :integer %>
+    <%= f.input :name %>
+    <%= f.input :email, as: :email %>
+    <%= f.input :mobile, as: :tel, label: 'Mobile Number' %>
+    <%= f.input :title, label: 'Subject' %>
+    <%= f.input :description, as: :text, label: 'Detailed Description' %>
+    <%= f.input :category, as: :select, collection: @labels, value_method: :id %>
+
+    <%= f.button :submit, "Submit" %>
+<% end %>
